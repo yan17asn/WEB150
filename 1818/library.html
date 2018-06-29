@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create an Object</title>
+    </head>
+    <body>
+        <h2>Highpoint Library</h2>
+        <h2>Book inventory</h2>
+        <p id="book1"></p>
+        <p id="book2"></p>
+        <script>
+        //create the constructor template
+            function Book(title, author, checkedOut, availableCopies){
+                this.title = title;
+                this.author = author;
+                this.checkedOut = checkedOut;
+                this.availableCopies = availableCopies;
+                this.checkAvailableCopies = function(){
+                    return this.availableCopies - this.checkedOut;
+                }
+            }
+            
+        //create two instance of the book object
+        //we pass arguments to the constructor
+        var book1 = new Book("Mystery on the blue train", "Agatha Christie", 10,15);
+        var book2 = new Book("Five little pigs", "Agatha Christie", 14,15);
+            
+        var book1Info = book1.title + ", " + book1.author + ", " + "Copies available: " + book1.checkAvailableCopies();
+        
+        var book2Info = book2.title + ", " + book2.author + ", " + "Copies available: " + book2.checkAvailableCopies();
+        
+        document.getElementById("book1").textContent = book1Info;
+        document.getElementById("book2").textContent = book2Info;
+        </script>
+    </body>
+</html>

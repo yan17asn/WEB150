@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>color change</title>
+      <link rel="stylesheet" href="css/click.css">
+    
+    
+  </head>
+  <body>
+      <h2>Click me</h2>
+      
+        <p id="one" class="black">p1</p>
+        <p id="two" class="black" >p2</p>
+        <p id="three" class="black" >p3</p>
+      <p id="four" class="black" >p4</p>
+      <p id="five" class="black" >p5</p>
+      <p id="six" class="black" >p6</p>
+      
+      
+    </body>
+    <script>
+        var el1 = document.getElementById("one");
+        el1.onmousedown=function(){
+el1.className = "red";
+}
+        var el2 = document.getElementById("two");
+        el2.onmousedown=function(){
+el2.className = "red";
+            var el3 = document.getElementById("three");
+        el3.onmousedown=function(){
+el3.className = "red";
+}
+        var el4 = document.getElementById("four");
+        el4.onmousedown=function(){
+el4.className = "red";
+}
+        var el5 = document.getElementById("five");
+        el5.onmousedown=function(){
+el5.className = "red";
+}
+        var el6 = document.getElementById("six");
+        el6.onmousedown=function(){
+el6.className = "red";
+}
+        
+}
+        
+
+    </script>
+</html>

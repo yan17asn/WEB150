@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MPG Calculator</title>
+    </head>
+    <body>
+    <h2>How many miles per gallon does your car use?</h2>
+        <p>Enter miles driven:</p>
+        <input type="text" id="mile" onblur="checkNum()"/>
+        <p>Enter gallons of gas used:</p>
+        <input type="text" id="gallon" onblur="checkNum()"/>
+        <p>Miles Per Gallon:</p>
+        <input type="text" id="result" style="background:#dedfdf" disabled/><br><br>
+        <button type="button" onclick="calMPG()">Calculate MPG</button>
+        
+        <script>
+        //get miles input
+        var mile = document.getElementById("mile");
+        //get gallons input   
+        var gallon = document.getElementById("gallon");
+        
+        //define a check the input is number or not   
+        function checkNum(){
+        if (isNaN(mile.value)||isNaN(gallon.value)) {                   
+               alert("Both entries must be numeric"); 
+               } 
+        }
+            
+        //define a function to calculate MPG    
+        function calMPG(){
+            var result = document.getElementById("result");
+            
+            var mpg = mile.value/gallon.value;
+            
+            result.value = mpg.toFixed(1);
+        }
+        </script>
+    </body>
+</html>

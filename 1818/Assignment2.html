@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+    </head>
+    <body>
+        <h2>Amazon Music</h2>
+        <h2>Vinyl inventory</h2>
+        <p id="vinyl1"></p>
+        <p id="vinyl2"></p>
+        <script>
+        //create the constructor template
+            function vinyl(title, artist, style, price, sold, total){
+                this.title = title;
+                this.artist = artist;
+                this.style = style;
+                this.price = price;
+                this.sold = sold;
+                this.total = total;
+                this.checkSellableCopies = function(){
+                    return this.total - this.sold;
+                }
+            }
+            
+        //create two instance of the vinyl object
+        //pass arguments to the constructor
+        var vinyl1 = new vinyl("reputation [2 LP][Picture Disc]", "Taylor Swift", "pop", 37.7, 10,40);
+        var vinyl2 = new vinyl("Sgt. Pepper's Lonely Hearts Club Band [LP][Picture Disc]", "The Beatles", "rock", 20.2, 10,30);
+            
+        var vinyl1Info ="<b>Title:</b> " + vinyl1.title + "<br><b>Artist:</b> " + vinyl1.artist + "<br><b>Style:</b> " + vinyl1.style +"<br><b>Price:</b> $" + vinyl1.price + "<br><b>Copies available:</b> " + vinyl1.checkSellableCopies();
+        
+        var vinyl2Info ="<b>Title:</b> " + vinyl2.title + "<br><b>Artist:</b> " + vinyl2.artist + "<br><b>Style:</b> " + vinyl2.style +"<br><b>Price:</b> $" + vinyl2.price + "<br><b>Copies available:</b> " + vinyl2.checkSellableCopies();
+        
+        document.getElementById("vinyl1").innerHTML = vinyl1Info;
+        document.getElementById("vinyl2").innerHTML = vinyl2Info;
+        </script>
+    </body>
+</html>

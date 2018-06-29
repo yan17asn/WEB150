@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+<head>
+<style>
+    .blue {
+        color:blue;
+    }
+    .red {
+        color:red;
+    }
+</style>
+</head>
+<body>
+    <h2 id='one'>Click me</h2>
+    <p class='blue'>p1</p>
+    <p class='blue'>p2</p>
+    <p class='blue'>p3</p>
+    <p class='blue'>p4</p>
+    <p class='blue'>p5</p>
+    <p class='blue'>p6</p>
+    
+
+    <script>
+    
+        //click  
+        var el = document.getElementById('one');  //get ref to h2
+        el.onclick = changeColor; //call the function on clcik event
+        
+        //define the function
+        function changeColor() {
+            //get all elements with class blue
+            var elements = document.getElementsByClassName('blue'); 
+
+           // start at second element and change the class
+            for(i = 0; i < elements.length; i++){
+    
+                 var el = elements[i]   
+                el.className = 'red';
+                el = elements[i+1]; 
+}
+}
+        
+
+
+    </script>
+</body>
+</html>

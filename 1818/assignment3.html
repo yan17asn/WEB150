@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>assignment3</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script>
+            //ask the user for first name and last name
+            var fullName = prompt("Please enter your name", "first and last name").toLowerCase(); 
+            
+            //split the first name and last name
+            var splitName = fullName.split(" ");
+            
+            //format the username
+            var userName = splitName[0].charAt(0) + splitName[1].substring(0,4);
+        
+            //display the username with format
+            document.getElementById("output").innerHTML = "<p>User name: " + userName + "</p>";
+        </script>
+    </body>
+</html>

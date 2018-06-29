@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 3: Functions, Methods &amp; Objects - String Object</title>
+    
+  </head>
+  <body>
+    <h1>TravelWorthy</h1>
+    <div id="info"></div>
+    <script>
+      // Create a variable called saying to hold the string that will be used
+var saying = 'Home sweet home ';
+
+
+var msg = '<h2>length</h2><p>' + saying.length + '</p>';
+
+msg += '<h2>uppercase</h2><p>' + saying.toUpperCase() + '</p>';
+
+msg += '<h2>lowercase</h2><p>' + saying.toLowerCase() + '</p>';
+
+msg += '<h2>character index: 12</h2><p>' + saying.charAt(12) + '</p>';
+
+msg += '<h2>first ee</h2><p>' + saying.indexOf('ee') + '</p>';
+
+msg += '<h2>last e</h2><p>' + saying.lastIndexOf('e') + '</p>';
+
+msg += '<h2>character index: 8-14</h2><p>' + saying.e + '</p>';
+
+msg += '<h2>replace</h2><p>' + saying.replace('me', 'w') + '</p>';
+
+
+var el = document.getElementById('info');
+
+el.innerHTML = msg;</script>
+  </body>
+</html>

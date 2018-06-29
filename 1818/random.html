@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 3: Functions, Methods &amp; Objects - Math Object</title>
+    
+  </head>
+  <body>
+    
+    <div id="info"></div>
+    <div id="info2"></div>
+    <div id="info3"></div>
+    <script>
+        // Create a variable to hold a random number between 1 and 10
+var randomNum = Math.floor((Math.random() * 10) + 1);
+var randomNum2 = Math.random() * 10 + 1;
+var randomNum3 = Math.random()
+
+// Create a variable called el to hold the element whose id attribute has a value of info
+var el1 = document.getElementById('info');
+// Write the number into that element
+el1.innerHTML = '<h2>random number</h2><p>' + randomNum + '</p>';
+var el2 = document.getElementById('info2');
+// Write the number into that element
+el2.innerHTML = '<h2>random number</h2><p>' + randomNum2 + '</p>';
+var el3 = document.getElementById('info3');
+// Write the number into that element
+el3.innerHTML = '<h2>random number</h2><p>' + randomNum3 + '</p>';
+      </script>
+  </body>
+</html>

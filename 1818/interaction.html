@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum example</title>
+    </head>
+    <body>
+        <h3>Let's play a game. Give me two numbers, and i'll tell you their sum</h3>
+        <h3 id="num1"></h3>
+        <h3 id="num2"></h3>
+        <h3 id="output"></h3>
+        <script>
+            //ask the user for first number
+            var num1 = parseInt(prompt("What is the first number?"));
+            
+            //ask the user for second number
+            var num2 = parseInt(prompt("What is the second number?"));
+            
+            //calculate sum
+            var sum = num1 + num2;
+            
+            //display first number
+            document.getElementById("num1").innerHTML = "First number: " + num1;
+            
+            //display second number
+            document.getElementById("num2").innerHTML = "Second number: " + num2;
+            
+            //display the total after calculating tax
+            document.getElementById("output").innerHTML = "The sum of : " + num1 + " + " + num2 + " = " + sum;
+        </script>
+    </body>
+</html>

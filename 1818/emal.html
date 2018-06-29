@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>emal</title>
+    </head>
+    <body>
+    <h2>Please join our email list</h2>
+        <label>Email Address:</label>
+        <input type="text" id="eaFirst" onblur="checkInput1()" />
+        <span id ="eanFirst" style="color:red"></span><br>
+        <label>Re-enter Email Address:</label>
+        <input type="text" id="eaSecond" onblur="checkInput2()" >
+        <span id ="eanSecond" style="color:red"></span><br>
+        <label>First Name:</label>
+        <input type="text" id="firstname" onblur="checkInput3()" >
+         <span id ="name" style="color:red"></span><br>
+        <button type="button" id="button1" onclick="checkMatch()" >Join our list</button>
+        
+        <script>
+    
+        var eaf = document.getElementById("eaFirst");
+    
+        var eas = document.getElementById("eaSecond");
+        
+        var fname = document.getElementById("firstname");
+        
+        var button1 = document.getElementById("button1");
+        
+        button1.disabled = true;
+            
+        
+        
+        
+            
+        document.getElementById("eanFirst").innerHTML="*";
+        
+        document.getElementById("eanSecond").innerHTML="*";
+        
+        document.getElementById("name").innerHTML="*";
+        
+        
+            
+        function checkInput1(){
+           
+            if(eaf.value.length==0){
+                document.getElementById("eanFirst").textContent="This field is required";
+            }
+            else
+                {
+                    document.getElementById("eanFirst").textContent="";
+                }
+            
+        }
+        
+            function checkInput2(){
+           
+            if(eas.value.length==0){
+                document.getElementById("eanSecond").textContent="This field is required";
+            }
+            else
+                {
+                    document.getElementById("eanSecond").textContent="";
+                }
+            
+        }
+            function checkInput3(){
+           
+            if(fname.value.length==0){
+                document.getElementById("name").textContent="This field is required";
+            }
+            else
+                {
+                    document.getElementById("name").textContent="";
+                }
+            
+        }
+        
+        function checkMatch(){
+       
+        if (eaf.value!==eas.value) {                   
+               document.getElementById("eanSecond").textContent="not match";
+            
+               } 
+        else{
+        
+        window.location.href="done.html";
+            }
+        }
+            
+          
+       
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoice Calculator</title>
+    </head>
+    <body>
+        <h3>Invoice Calculator</h3>
+        <h3 id="num"></h3>
+        <h3 id="result"></h3>
+        <script>
+            var total = 0;
+            var i = 0;
+            var arr = new Array()
+            
+            //ask user for invoice amount input, input 0 to finish
+            while(amo!=0){
+            var amo = parseFloat(prompt("Please input the invoice amount, input 0 to finish"));
+            total += amo;
+            arr[i] =  amo;
+            i=i+1;
+            }
+            
+            
+            //Calculates the total amount of invoice plus a 10% tax rate
+            var output = total*1.1;
+            
+            //Round the total to 2 decimal places
+            output = output.toFixed(2);
+            
+           
+            
+            //print the invoice list and the final result
+            for(j=1;j<i;j++){
+            document.getElementById("num").innerHTML = document.getElementById("num").innerHTML + "You entered invoice " + j + " : $" + arr[j-1]+"<br>";
+            }
+            
+            
+            document.getElementById("result").textContent = "Your total amount of invoice at 10% tax rate is : $" + output;
+        </script>
+    </body>
+</html>
